@@ -16,6 +16,15 @@ const productSchema = new mongoose.Schema({
        type:String,
     
     },
+    category_type:{
+        type:String,
+        required:true
+    }
+    // category: { 
+    //     type: mongoose.Schema.Types.ObjectId, 
+    //     ref: 'name', 
+    //     required: true 
+    // }
 
 }, { timestamps: true })
 

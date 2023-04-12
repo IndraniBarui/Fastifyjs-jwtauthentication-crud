@@ -20,6 +20,7 @@ exports.createProduct = async (req, reply) => {
         });
       }
   } catch (error) {
+    console.log(error);
     reply.status(500).send("error" + error.messgae);
   }
 };
@@ -47,17 +48,7 @@ exports.findbyname = async (req, reply) => {
 };
 
 exports.delete= async(req,reply)=>{
-    
-    // const productId = req.params._id;
-    // try{
-    //     await Product.deleteOne( { _id: productId } );
-    //     reply.send({ message: 'Product deleted successfully' });
-    // }catch(error){
-    //     console.log(error)
-    //     reply.send("error"+error.message)
-    // }
-
-    try{
+   try{
         const id=req.params.id;
         const body= req.body
         const results= await Product.deleteOne({_id:id})
