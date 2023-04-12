@@ -17,7 +17,10 @@ const userSchema = new mongoose.Schema({
         default: "Basic",
         required: true,
       },
-
+    notification:{
+      type:String,
+      required:true,
+    }
     })
     
 
